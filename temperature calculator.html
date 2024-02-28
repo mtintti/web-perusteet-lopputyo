@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <title>Temperature Difference Calculator</title>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html" class="nav__logo">Home</a>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="weather.html" class="nav__link">Weather</a></li>
+                    <li class="nav__item"><a href="temperature calculator.html" class="nav__link active">Calculator</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+ <main class="main">
+    <div class="temp-calculator-container">
+        <h1>City Temperature Difference Calculator</h1>
+        <form id="temp-difference-form">
+            <div>
+                <label for="city1">City 1:</label>
+                <input type="text" id="city1" name="city1" required autocomplete="off">
+                <ul id="city1-suggestions" class="city-suggestions"></ul>
+            </div>
+            <div>
+                <label for="city2">City 2:</label>
+                <input type="text" id="city2" name="city2" required autocomplete="off">
+                <ul id="city2-suggestions" class="city-suggestions"></ul>
+            </div>
+            <button type="submit" id="calculate-difference-btn">Calculate Difference</button>
+        </form>
+        <div class="result-container">
+            <label for="result">Difference (°C):</label>
+            <input type="text" id="result" class="result-output" readonly>
+        </div>
+    </div>
+</main>
+<script src="js/javascript.js"></script>
+</body>
+</html>
