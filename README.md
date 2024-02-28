@@ -1,4 +1,4 @@
-# web-perusteet-lopputyo
+# web-perusteet-lopputyö
 
 Sovellus käyttää OpenWeatherMap API:a lämpötila tietojen hakemiseen ja laskemalla kaupunkien välisen lämpötilaeron. Käyttäjä voi hakea usean kaupungin lämpötila tietoja ja liikkua kaupunkien välillä nappeja painaen.
 
