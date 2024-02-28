@@ -3,7 +3,6 @@ class WeatherAPI {
         this.apiKey = apiKey;
         this.apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
     }
-
     fetchTemperature(city) {
         return fetch(this.apiUrl + city + '&appid=' + this.apiKey)
             .then(response => {
@@ -43,11 +42,5 @@ class TemperatureCalculator {
     }
 }
 
-// Usage
 const weatherAPI = new WeatherAPI('put api key');
 const tempCalc = new TemperatureCalculator(weatherAPI);
-
-
-
-
-

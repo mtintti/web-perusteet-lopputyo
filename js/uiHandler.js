@@ -1,4 +1,3 @@
-// uiHandler.js
 const uiHandler = (() => {
     const updateWeatherUI = (data) => {
         document.querySelector(".city").textContent = data.name;
@@ -6,7 +5,6 @@ const uiHandler = (() => {
         document.querySelector(".Humidity").textContent = `${data.main.humidity}%`;
         document.querySelector(".wind").textContent = `${data.wind.speed} km/h`;
         document.querySelector(".feels_like").textContent = `feels like ${Math.round(data.main.feels_like)} °C`;
-
 
         const timezoneOffset = data.timezone;
         const riseDate = new Date((data.sys.sunrise + timezoneOffset) * 1000);
@@ -21,7 +19,6 @@ const uiHandler = (() => {
         if (weatherCard) {
             weatherCard.style.display = "block"; 
         }
-    
     };
 
     const showError = (message) => {
@@ -34,7 +31,6 @@ const uiHandler = (() => {
         document.querySelector(".error").style.display = "none";
     };
 
-
     const handleSearch = async () => {
         try {
             const city = searchBox.value;
@@ -42,7 +38,7 @@ const uiHandler = (() => {
             uiHandler.updateWeatherUI(data); 
             SearchHistoryManager.saveSearchToHistory(city);
         } catch (error) {
-            uiHandler.showError(error.message); // Make sure you handle errors appropriately
+            uiHandler.showError(error.message); 
         }
     };
 
